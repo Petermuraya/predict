@@ -1,0 +1,42 @@
+@keyframes gradient-x {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 6s ease infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  @keyframes float-delay {
+    0%, 100% { transform: translateY(10px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(-5deg); }
+  }
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(3deg); }
+  }
+  @keyframes float-delay-slow {
+    0%, 100% { transform: translateY(5px) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(-3deg); }
+  }
+  
+  .animate-float { animation: float 8s ease-in-out infinite; }
+  .animate-float-delay { animation: float-delay 10s ease-in-out infinite 2s; }
+  .animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
+  .animate-float-delay-slow { animation: float-delay-slow 14s ease-in-out infinite 3s; }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .animate-float, 
+    .animate-float-delay,
+    .animate-float-slow,
+    .animate-float-delay-slow {
+      animation-duration: 1.5x;
+      opacity: 0.7;
+    }
+  }
